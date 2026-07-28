@@ -45,7 +45,7 @@ export function Contact() {
           </ul>
           <a
             href={site.bookingUrl}
-            className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-cream shadow-lg shadow-violet/25 transition-transform hover:scale-105"
+            className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-ink shadow-lg shadow-violet/25 transition-transform hover:scale-105"
           >
             Grab a Slot
           </a>

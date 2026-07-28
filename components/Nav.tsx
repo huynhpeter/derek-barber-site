@@ -11,7 +11,10 @@ export function Nav() {
           2<span className="text-violet">W</span>1
           <span className="text-sunset">B</span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm text-steel sm:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-6 text-sm text-steel sm:flex"
+        >
           {nav.map((item) => (
             <a
               key={item.href}

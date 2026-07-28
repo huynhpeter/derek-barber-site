@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { seo, site } from "@/lib/site";
 import "./globals.css";
 
 const bebas = Bebas_Neue({
@@ -15,9 +16,50 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "2Wheels1Beard — Derek Beatty, Barber",
-  description:
-    "Fresh cuts from Derek Beatty in Arizona. Two wheels, one beard, zero bad fades. Book your spot.",
+  metadataBase: new URL(seo.siteUrl),
+  title: {
+    default: seo.title,
+    template: "%s — 2Wheels1Beard",
+  },
+  description: seo.description,
+  keywords: [...seo.keywords],
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: seo.title,
+    description: seo.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+// schema.org structured data — address/hours are PLACEHOLDERS from lib/site.ts
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  name: site.name,
+  url: seo.siteUrl,
+  description: seo.description,
+  founder: { "@type": "Person", name: site.barber },
+  address: {
+    "@type": "PostalAddress",
+    // PLACEHOLDER — fill from lib/site.ts once Derek provides the shop address
+    streetAddress: site.location.address,
+    addressRegion: "AZ",
+    addressCountry: "US",
+  },
+  openingHours: [...seo.openingHours],
+  priceRange: seo.priceRange,
+  sameAs: [site.instagram, site.youtube],
 };
 
 export default function RootLayout({
@@ -26,7 +68,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bebas.variable} ${grotesk.variable}`}>
       <body>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-full focus:bg-sunset focus:px-4 focus:py-2 focus:font-semibold focus:text-ink"
+        >
+          Skip to content
+        </a>
         <SmoothScroll>{children}</SmoothScroll>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

@@ -21,6 +21,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  /* Safety net for rotated/oversized motion elements (marquee) */
+  overflow-x: clip;
+}
+
 body {
   background-color: var(--color-ink);
   color: var(--color-cream);
@@ -33,6 +39,12 @@ body {
   color: var(--color-cream);
 }
 
+/* Visible focus for keyboard users — sunset ring reads on every surface */
+:focus-visible {
+  outline: 2px solid var(--color-sunset);
+  outline-offset: 3px;
+}
+
 /* Barber-pole stripe utility — micro-accent, use sparingly */
 .pole-stripe {
   background: repeating-linear-gradient(
@@ -42,4 +54,41 @@ body {
     var(--color-pole-blue) 24px 36px,
     var(--color-cream) 36px 48px
   );
+}
+
+/* Spinning barber pole (see components/BarberPole.tsx) — transform-only.
+   67.9px ≈ one full stripe period along Y for the -45deg 48px gradient. */
+@keyframes pole-move {
+  from {
+    transform: translateY(-67.9px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animate-pole {
+  animation: pole-move 1.8s linear infinite;
+}
+
+/* Marquee strip — two identical halves, translate by exactly one half. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-pole,
+  .animate-marquee {
+    animation: none;
+  }
 }

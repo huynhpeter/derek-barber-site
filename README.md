@@ -27,12 +27,15 @@ Custom domain: once `2wheels1beard.com` is registered and on Cloudflare, uncomme
 
 ## Where things live
 
-- `lib/site.ts` — all copy-ish constants: booking URL, socials, hours, placeholder services.
+- `lib/site.ts` — all copy-ish constants: booking URL, socials, hours, placeholder services, portfolio tiles, SEO (`seo.siteUrl`, structured-data hours).
 - `components/sections/*` — one component per page section, in page order.
 - `components/Reveal.tsx` — the scroll-reveal pattern; wrap new section content in it.
-- `components/SmoothScroll.tsx` — Lenis provider (mounted in `app/layout.tsx`).
-- `app/globals.css` — palette tokens (Tailwind v4 `@theme`); `.pole-stripe` barber-pole utility.
+- `components/SmoothScroll.tsx` — Lenis provider + `MotionConfig reducedMotion="user"` (mounted in `app/layout.tsx`); Lenis is skipped entirely under prefers-reduced-motion.
+- `components/Marquee.tsx` / `components/BarberPole.tsx` — decorative motion accents (CSS keyframes in `globals.css`, disabled under reduced motion).
+- `components/sections/Portfolio.tsx` — tile grid + lightbox (ESC/arrows/backdrop, focus-trapped).
+- `app/globals.css` — palette tokens (Tailwind v4 `@theme`); `.pole-stripe` barber-pole utility; focus-visible ring; marquee/pole keyframes.
+- `app/opengraph-image.tsx` — build-time-generated OG card; `app/icon.svg` favicon; `app/robots.ts` / `app/sitemap.ts`.
 
 ## Placeholders to replace
 
-Real photos (portfolio grid, About portrait) · real services/prices · shop name + address + Maps link in `lib/site.ts` · hours · About copy from Derek.
+Real photos (portfolio tiles + lightbox in `lib/site.ts`, About portrait) · real services/prices · shop name + address + Maps link in `lib/site.ts` · hours (display + `seo.openingHours` structured data) · About copy from Derek · confirm `seo.siteUrl` once `2wheels1beard.com` is registered.
