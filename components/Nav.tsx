@@ -1,15 +1,25 @@
+import Image from "next/image";
 import { nav, site } from "@/lib/site";
 
 export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-paper/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a
-          href="#top"
-          className="font-display text-xl tracking-wide text-charcoal sm:text-2xl"
-        >
-          2<span className="text-violet">W</span>1
-          <span className="text-sunset">B</span>
+        <a href="#top" className="flex items-center gap-2">
+          <Image
+            src="/images/logo-mascot.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
+          <Image
+            src="/images/logo-text.png"
+            alt="2Wheels1Beard"
+            width={1203}
+            height={249}
+            className="h-5 w-auto sm:h-6"
+          />
         </a>
         <nav
           aria-label="Primary"

@@ -33,9 +33,10 @@ Celtics green / Husker scarlet stay inside the logo & photos only.
 1. **Hero** — brand, tagline riffing on two wheels / one beard, primary CTA **Book Now → https://cutcal.app/2wheels1beard**, social buttons (IG, YouTube).
 2. **Portfolio** — responsive image grid. Currently Unsplash stock stand-ins in `public/images/portfolio/` (source ids in `lib/site.ts`); swap for Derek's real photos. YouTube Data API pull-in later; Instagram API last (requires Business account + Meta app). Deferred, not built now.
 3. **Services & pricing** — fixed-duration/fixed-price cards (source of truth is Cutcal; shown here as marketing).
-4. **Shop teaser** — "coming soon" placeholder; future dropshipping + some pickup product. Nothing functional now, nav slot reserved.
-5. **Location / Contact** — shop placeholder, hours, map link, **walk-ins welcome** note.
-6. **Footer** — socials, booking link, fine print.
+4. **About Derek** — real photo (`public/images/derek.jpg`), Nebraska roots, the bike, fandoms.
+5. **Shop teaser** — "coming soon" placeholder; future dropshipping + some pickup product. Nothing functional now, nav slot reserved.
+6. **Location / Contact** — shop placeholder, hours, map link, **walk-ins welcome** note.
+7. **Footer** — socials, booking link, fine print.
 
 ## Booking
 

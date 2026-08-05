@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -6,10 +7,14 @@ export function Footer() {
       <div className="pole-stripe h-1 w-full opacity-60" />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
-          <p className="font-display text-2xl tracking-wide text-charcoal">
-            2Wheels1Beard
-          </p>
-          <p className="mt-1 text-xs text-stone">
+          <Image
+            src="/images/logo-text.png"
+            alt="2Wheels1Beard"
+            width={1203}
+            height={249}
+            className="mx-auto h-8 w-auto sm:mx-0"
+          />
+          <p className="mt-2 text-xs text-stone">
             © {new Date().getFullYear()} {site.barber}. All rights reserved.
           </p>
         </div>
