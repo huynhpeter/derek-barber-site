@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* 2Wheels1Beard palette — dark theme only (see BRIEF.md) */
-  --color-ink: #0e0b16;
-  --color-ink-soft: #171225;
-  --color-violet: #8b5cf6;
-  --color-violet-deep: #6d28d9;
-  --color-sunset: #f97316;
-  --color-sunset-soft: #fb923c;
-  --color-cream: #faf5ef;
-  --color-steel: #9ca3af;
+  /* 2Wheels1Beard palette — light cream/desert theme (see BRIEF.md) */
+  --color-paper: #faf3e7;
+  --color-paper-soft: #f2e8d5;
+  --color-charcoal: #1c1917;
+  --color-violet: #6d28d9;
+  --color-violet-deep: #4c1d95;
+  --color-sunset: #c2410c;
+  --color-sunset-soft: #ea580c;
+  --color-stone: #57534e;
   --color-pole-red: #e4353f;
   --color-pole-blue: #2f6bff;
 
@@ -28,18 +28,18 @@ body {
 }
 
 body {
-  background-color: var(--color-ink);
-  color: var(--color-cream);
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
   background-color: var(--color-violet);
-  color: var(--color-cream);
+  color: var(--color-paper);
 }
 
-/* Visible focus for keyboard users — sunset ring reads on every surface */
+/* Visible focus for keyboard users — burnt-orange ring reads on every surface */
 :focus-visible {
   outline: 2px solid var(--color-sunset);
   outline-offset: 3px;
@@ -50,9 +50,9 @@ body {
   background: repeating-linear-gradient(
     -45deg,
     var(--color-pole-red) 0 12px,
-    var(--color-cream) 12px 24px,
+    #fffdf8 12px 24px,
     var(--color-pole-blue) 24px 36px,
-    var(--color-cream) 36px 48px
+    #fffdf8 36px 48px
   );
 }
 

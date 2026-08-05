@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(seo.siteUrl),
   title: {
     default: seo.title,
-    template: "%s — 2Wheels1Beard",
+    template: "%s | 2Wheels1Beard",
   },
   description: seo.description,
   keywords: [...seo.keywords],
@@ -70,7 +70,7 @@ export default function RootLayout({
       <body>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-full focus:bg-sunset focus:px-4 focus:py-2 focus:font-semibold focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-full focus:bg-sunset focus:px-4 focus:py-2 focus:font-semibold focus:text-paper"
         >
           Skip to content
         </a>

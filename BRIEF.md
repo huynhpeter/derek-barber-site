@@ -13,15 +13,16 @@ Portfolio site for **Derek Beatty**, barbering as **2Wheels1Beard** — an indep
 - **dryclean.love** — the animation/motion bar: scroll-driven reveals, smooth flow.
 - **scissorsscotch.com** — layout sanity check: functional single-brand service site.
 
-## Palette (dark theme only)
+## Palette (light cream/desert theme — switched 2026-08-05 from the original dark purple/orange)
 
 | Token | Hex | Role |
 |---|---|---|
-| `ink` | `#0E0B16` | Background — near-black, purple undertone |
-| `violet` | `#8B5CF6` | Primary — logo purple |
-| `sunset` | `#F97316` | Accent / CTAs — beard + Suns orange |
-| `cream` | `#FAF5EF` | Text |
-| `steel` | `#9CA3AF` | Muted text |
+| `paper` | `#FAF3E7` | Background — warm cream |
+| `paper-soft` | `#F2E8D5` | Card / surface background |
+| `charcoal` | `#1C1917` | Text |
+| `sunset` | `#C2410C` | Primary / CTAs — burnt desert orange |
+| `violet` | `#6D28D9` | Accent — deep logo violet |
+| `stone` | `#57534E` | Muted text (6.9:1 on paper, AA) |
 | `pole-red` | `#E4353F` | Micro-accent (barber pole) — sparingly |
 | `pole-blue` | `#2F6BFF` | Micro-accent (barber pole) — sparingly |
 
@@ -44,7 +45,7 @@ All booking goes through **Cutcal** (separate product, separate repo at `~/works
 ## Tech
 
 - Next.js (App Router) + TypeScript, static-first — no database, no auth.
-- Tailwind (v4, CSS-first tokens), dark theme only.
+- Tailwind (v4, CSS-first tokens), light theme only.
 - Motion: `motion` (Framer Motion) + Lenis smooth scroll.
 - Deploy: Cloudflare Workers via `@opennextjs/cloudflare` (free tier).
 - Mobile-first responsive.

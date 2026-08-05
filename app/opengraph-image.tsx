@@ -19,10 +19,10 @@ export default function OpengraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#0E0B16",
+          backgroundColor: "#FAF3E7",
           backgroundImage:
-            "radial-gradient(circle at 30% 20%, rgba(139,92,246,0.35), transparent 55%), radial-gradient(circle at 75% 85%, rgba(249,115,22,0.25), transparent 55%)",
-          color: "#FAF5EF",
+            "radial-gradient(circle at 30% 20%, rgba(109,40,217,0.14), transparent 55%), radial-gradient(circle at 75% 85%, rgba(194,65,12,0.14), transparent 55%)",
+          color: "#1C1917",
           fontFamily: "sans-serif",
         }}
       >
@@ -36,14 +36,14 @@ export default function OpengraphImage() {
           }}
         >
           <span>Two Wheels.&nbsp;</span>
-          <span style={{ color: "#8B5CF6" }}>One&nbsp;</span>
-          <span style={{ color: "#F97316" }}>Beard.</span>
+          <span style={{ color: "#6D28D9" }}>One&nbsp;</span>
+          <span style={{ color: "#C2410C" }}>Beard.</span>
         </div>
         <div
           style={{
             marginTop: 28,
             fontSize: 34,
-            color: "#9CA3AF",
+            color: "#57534E",
             display: "flex",
           }}
         >
@@ -57,7 +57,7 @@ export default function OpengraphImage() {
             height: 14,
             display: "flex",
             background:
-              "repeating-linear-gradient(-45deg, #E4353F 0 24px, #FAF5EF 24px 48px, #2F6BFF 48px 72px, #FAF5EF 72px 96px)",
+              "repeating-linear-gradient(-45deg, #E4353F 0 24px, #FFFDF8 24px 48px, #2F6BFF 48px 72px, #FFFDF8 72px 96px)",
           }}
         />
       </div>

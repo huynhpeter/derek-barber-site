@@ -21,9 +21,9 @@ export const site = {
 export const seo = {
   // PLACEHOLDER domain — user is registering 2wheels1beard.com
   siteUrl: "https://2wheels1beard.com",
-  title: "2Wheels1Beard — Derek Beatty, Barber in Arizona",
+  title: "2Wheels1Beard | Derek Beatty, Barber in Arizona",
   description:
-    "Fresh fades, sharp beards, zero bad vibes. Derek Beatty (2Wheels1Beard) is an independent barber in Arizona. Book online — walk-ins welcome when the chair's open.",
+    "Derek Beatty (2Wheels1Beard) is an independent barber in Arizona. Fades, tapers, and beard trims. Book online, or walk in when the chair is open.",
   keywords: [
     "barber",
     "Arizona barber",
@@ -49,12 +49,12 @@ export type PortfolioTile = {
 // PLACEHOLDER tiles — swap for real photos from Derek
 // (later: YouTube Data API feed, then Instagram — see BRIEF.md)
 export const portfolio: PortfolioTile[] = [
-  { label: "Skin fade", gradient: "from-violet/40 via-ink-soft to-ink" },
-  { label: "Beard sculpt", gradient: "from-sunset/35 via-ink-soft to-ink" },
-  { label: "Taper + line-up", gradient: "from-pole-blue/30 via-ink-soft to-ink" },
-  { label: "The full 2W1B", gradient: "from-violet/30 via-sunset/15 to-ink" },
-  { label: "Kids cut", gradient: "from-pole-red/25 via-ink-soft to-ink" },
-  { label: "Fresh off the bike", gradient: "from-sunset/25 via-violet/20 to-ink" },
+  { label: "Skin fade", gradient: "from-violet/40 via-paper-soft to-paper" },
+  { label: "Beard sculpt", gradient: "from-sunset/35 via-paper-soft to-paper" },
+  { label: "Taper + line-up", gradient: "from-pole-blue/30 via-paper-soft to-paper" },
+  { label: "Cut and beard", gradient: "from-violet/30 via-sunset/15 to-paper" },
+  { label: "Kids cut", gradient: "from-pole-red/25 via-paper-soft to-paper" },
+  { label: "Fresh off the bike", gradient: "from-sunset/25 via-violet/20 to-paper" },
 ];
 
 export const nav = [
@@ -78,13 +78,13 @@ export const services: Service[] = [
     name: "Haircut",
     price: "$35",
     duration: "30 min",
-    blurb: "Clean fade, taper, or scissor cut. Dialed to you.",
+    blurb: "Fade, taper, or scissor cut.",
   },
   {
     name: "Cut + Beard",
     price: "$50",
     duration: "45 min",
-    blurb: "The full 2W1B treatment. Cut up top, beard sculpted.",
+    blurb: "Haircut plus a full beard trim and shape.",
   },
   {
     name: "Beard Trim",
@@ -96,6 +96,6 @@ export const services: Service[] = [
     name: "Kids Cut",
     price: "$25",
     duration: "30 min",
-    blurb: "Patience included. Ages 12 and under.",
+    blurb: "Ages 12 and under.",
   },
 ];

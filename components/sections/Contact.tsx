@@ -6,11 +6,11 @@ export function Contact() {
     <section id="contact" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <div className="grid gap-10 md:grid-cols-2">
         <Reveal>
-          <h2 className="font-display text-5xl tracking-wide text-cream sm:text-6xl">
+          <h2 className="font-display text-5xl tracking-wide text-charcoal sm:text-6xl">
             Find <span className="text-sunset">Me</span>
           </h2>
-          <p className="mt-4 text-steel">
-            Cutting at <span className="text-cream">{site.location.shop}</span>
+          <p className="mt-4 text-stone">
+            Cutting at <span className="text-charcoal">{site.location.shop}</span>
             <br />
             {site.location.address}
           </p>
@@ -24,30 +24,30 @@ export function Contact() {
           </a>
 
           <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-sunset/40 px-4 py-2 text-sm text-sunset">
-            ✂️ Walk-ins welcome when the chair&apos;s open
+            Walk-ins welcome when the chair is open
           </p>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <h3 className="text-sm uppercase tracking-[0.25em] text-steel">
+          <h3 className="text-sm uppercase tracking-[0.25em] text-stone">
             Hours
           </h3>
-          <ul className="mt-4 divide-y divide-cream/10">
+          <ul className="mt-4 divide-y divide-charcoal/10">
             {site.hours.map((h) => (
               <li
                 key={h.days}
                 className="flex items-center justify-between py-3"
               >
-                <span className="text-cream">{h.days}</span>
-                <span className="text-steel">{h.time}</span>
+                <span className="text-charcoal">{h.days}</span>
+                <span className="text-stone">{h.time}</span>
               </li>
             ))}
           </ul>
           <a
             href={site.bookingUrl}
-            className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-ink shadow-lg shadow-violet/25 transition-transform hover:scale-105"
+            className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-paper shadow-lg shadow-violet/25 transition-transform hover:scale-105"
           >
-            Grab a Slot
+            Book a Time
           </a>
         </Reveal>
       </div>

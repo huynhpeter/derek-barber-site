@@ -5,11 +5,11 @@ export function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <h2 className="font-display text-5xl tracking-wide text-cream sm:text-6xl">
+        <h2 className="font-display text-5xl tracking-wide text-charcoal sm:text-6xl">
           <span className="text-sunset">Services</span> &amp; Pricing
         </h2>
-        <p className="mt-3 max-w-lg text-steel">
-          Fixed prices, no surprises. Book online and pay in the chair.
+        <p className="mt-3 max-w-lg text-stone">
+          Prices are fixed and listed below. Book online, pay at the shop.
         </p>
       </Reveal>
 
@@ -18,14 +18,14 @@ export function Services() {
           <Reveal key={s.name} delay={i * 0.08}>
             <a
               href={site.bookingUrl}
-              className="group flex items-start justify-between gap-4 rounded-xl border border-cream/10 bg-ink-soft p-6 transition-colors hover:border-sunset/50"
+              className="group flex items-start justify-between gap-4 rounded-xl border border-charcoal/10 bg-paper-soft p-6 transition-colors hover:border-sunset/50"
             >
               <div>
-                <h3 className="text-xl font-semibold text-cream group-hover:text-sunset">
+                <h3 className="text-xl font-semibold text-charcoal group-hover:text-sunset">
                   {s.name}
                 </h3>
-                <p className="mt-1 text-sm text-steel">{s.blurb}</p>
-                <p className="mt-3 text-xs uppercase tracking-widest text-steel">
+                <p className="mt-1 text-sm text-stone">{s.blurb}</p>
+                <p className="mt-3 text-xs uppercase tracking-widest text-stone">
                   {s.duration}
                 </p>
               </div>

@@ -52,7 +52,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-4 text-sm uppercase tracking-[0.3em] text-steel"
+          className="mb-4 text-sm uppercase tracking-[0.3em] text-stone"
         >
           Derek Beatty · Barber · Arizona
         </motion.p>
@@ -61,7 +61,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-6xl leading-none tracking-wide text-cream sm:text-8xl md:text-9xl"
+          className="font-display text-6xl leading-none tracking-wide text-charcoal sm:text-8xl md:text-9xl"
         >
           Two Wheels.
           <br />
@@ -73,10 +73,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="mt-6 max-w-md text-base text-steel sm:text-lg"
+          className="mt-6 max-w-md text-base text-stone sm:text-lg"
         >
-          Zero bad fades. Fresh cuts and sharp beards — ride in, walk out
-          clean.
+          Fades, tapers, and beard work in Arizona. Book online, or walk in
+          when the chair is open.
         </motion.p>
 
         <motion.div
@@ -89,7 +89,7 @@ export function Hero() {
             href={site.bookingUrl}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="rounded-full bg-sunset px-8 py-4 text-lg font-bold text-ink shadow-lg shadow-sunset/25"
+            className="rounded-full bg-sunset px-8 py-4 text-lg font-bold text-paper shadow-lg shadow-sunset/25"
           >
             Book Now
           </motion.a>
@@ -97,7 +97,7 @@ export function Hero() {
             href={site.instagram}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-cream/20 px-6 py-4 text-sm font-semibold text-cream transition-colors hover:border-violet hover:text-violet"
+            className="rounded-full border border-charcoal/20 px-6 py-4 text-sm font-semibold text-charcoal transition-colors hover:border-violet hover:text-violet"
           >
             Instagram
           </a>
@@ -105,7 +105,7 @@ export function Hero() {
             href={site.youtube}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-cream/20 px-6 py-4 text-sm font-semibold text-cream transition-colors hover:border-violet hover:text-violet"
+            className="rounded-full border border-charcoal/20 px-6 py-4 text-sm font-semibold text-charcoal transition-colors hover:border-violet hover:text-violet"
           >
             YouTube
           </a>
@@ -118,13 +118,13 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 flex flex-col items-center gap-2 text-steel"
+        className="absolute bottom-8 flex flex-col items-center gap-2 text-stone"
       >
         <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
         <motion.span
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="block h-6 w-px bg-gradient-to-b from-steel to-transparent"
+          className="block h-6 w-px bg-gradient-to-b from-stone to-transparent"
         />
       </motion.div>
 

@@ -8,7 +8,7 @@ export function About() {
         <Reveal>
           <div className="relative">
             {/* PLACEHOLDER — portrait / bike photo of Derek */}
-            <div className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-cream/10 bg-ink-soft text-steel/50">
+            <div className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-charcoal/10 bg-paper-soft text-stone/50">
               <span className="text-sm">Derek + the bike</span>
             </div>
             {/* animated barber-pole micro-accent */}
@@ -17,22 +17,21 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <h2 className="font-display text-5xl tracking-wide text-cream sm:text-6xl">
+          <h2 className="font-display text-5xl tracking-wide text-charcoal sm:text-6xl">
             About <span className="text-violet">Derek</span>
           </h2>
           {/* PLACEHOLDER copy — get the real story from Derek */}
-          <p className="mt-4 text-steel">
-            Nebraska-raised, Arizona-based. When he&apos;s not behind the chair
-            he&apos;s on two wheels in the desert — hence the name. The beard
-            came first; the clippers followed.
+          <p className="mt-4 text-stone">
+            Derek grew up in Nebraska and cuts hair in Arizona now. When
+            he&apos;s not behind the chair he&apos;s out riding in the desert.
+            That&apos;s where the name comes from.
           </p>
-          <p className="mt-4 text-steel">
-            Every cut gets the same treatment: unhurried, dialed-in, and
-            finished sharp. Suns games on the shop TV, no bad vibes, no bad
-            fades.
+          <p className="mt-4 text-stone">
+            He takes his time on every cut and finishes clean. If the Suns are
+            playing, the game is on in the shop.
           </p>
-          <p className="mt-6 text-sm uppercase tracking-[0.25em] text-steel">
-            Bug Eaters · Snowbird-izona · <span aria-hidden>🏍️ + 🧔</span>
+          <p className="mt-6 text-sm uppercase tracking-[0.25em] text-stone">
+            Suns · Celtics · Huskers
           </p>
         </Reveal>
       </div>

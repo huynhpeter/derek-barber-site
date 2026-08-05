@@ -12,11 +12,11 @@ export function Portfolio() {
   return (
     <section id="portfolio" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <Reveal>
-        <h2 className="font-display text-5xl tracking-wide text-cream sm:text-6xl">
+        <h2 className="font-display text-5xl tracking-wide text-charcoal sm:text-6xl">
           The <span className="text-violet">Work</span>
         </h2>
-        <p className="mt-3 max-w-lg text-steel">
-          Cuts, beards, and transformations. Fresh from the chair.
+        <p className="mt-3 max-w-lg text-stone">
+          Recent cuts and beard work. Real photos are coming soon.
           {/* TODO: replace placeholder tiles with real photos from Derek;
               later: YouTube Data API feed, then Instagram. */}
         </p>
@@ -31,9 +31,9 @@ export function Portfolio() {
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               aria-label={`View: ${tile.label}`}
-              className={`group flex aspect-square w-full items-end justify-start rounded-xl border border-cream/10 bg-gradient-to-br p-4 text-left transition-colors hover:border-violet/40 ${tile.gradient}`}
+              className={`group flex aspect-square w-full items-end justify-start rounded-xl border border-charcoal/10 bg-gradient-to-br p-4 text-left transition-colors hover:border-violet/40 ${tile.gradient}`}
             >
-              <span className="text-sm text-steel transition-colors group-hover:text-cream">
+              <span className="text-sm text-stone transition-colors group-hover:text-charcoal">
                 {tile.label}
               </span>
             </motion.button>
@@ -121,7 +121,7 @@ function Lightbox({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[90] flex items-center justify-center bg-ink/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[90] flex items-center justify-center bg-paper/90 p-4 backdrop-blur-sm"
           onClick={onClose}
         >
           <div
@@ -137,24 +137,24 @@ function Lightbox({
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
-              className={`flex aspect-square w-full items-center justify-center rounded-2xl border border-cream/15 bg-gradient-to-br ${tile.gradient}`}
+              className={`flex aspect-square w-full items-center justify-center rounded-2xl border border-charcoal/15 bg-gradient-to-br ${tile.gradient}`}
             >
               {/* PLACEHOLDER — real photo renders here */}
-              <span className="px-6 text-center text-lg text-cream">
+              <span className="px-6 text-center text-lg text-charcoal">
                 {tile.label}
               </span>
             </motion.div>
 
             <div className="mt-4 flex items-center justify-between">
-              <p className="text-sm text-steel">
-                {(active ?? 0) + 1} / {portfolio.length} — {tile.label}
+              <p className="text-sm text-stone">
+                {(active ?? 0) + 1} / {portfolio.length} · {tile.label}
               </p>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={() => step(-1)}
                   aria-label="Previous photo"
-                  className="rounded-full border border-cream/20 px-4 py-2 text-sm text-cream transition-colors hover:border-violet hover:text-violet"
+                  className="rounded-full border border-charcoal/20 px-4 py-2 text-sm text-charcoal transition-colors hover:border-violet hover:text-violet"
                 >
                   ←
                 </button>
@@ -162,7 +162,7 @@ function Lightbox({
                   type="button"
                   onClick={() => step(1)}
                   aria-label="Next photo"
-                  className="rounded-full border border-cream/20 px-4 py-2 text-sm text-cream transition-colors hover:border-violet hover:text-violet"
+                  className="rounded-full border border-charcoal/20 px-4 py-2 text-sm text-charcoal transition-colors hover:border-violet hover:text-violet"
                 >
                   →
                 </button>
@@ -171,7 +171,7 @@ function Lightbox({
                   type="button"
                   onClick={onClose}
                   aria-label="Close viewer"
-                  className="rounded-full bg-sunset px-4 py-2 text-sm font-semibold text-ink transition-transform hover:scale-105"
+                  className="rounded-full bg-sunset px-4 py-2 text-sm font-semibold text-paper transition-transform hover:scale-105"
                 >
                   Close
                 </button>
