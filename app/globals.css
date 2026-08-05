@@ -56,20 +56,6 @@ body {
   );
 }
 
-/* Spinning barber pole (see components/BarberPole.tsx) — transform-only.
-   67.9px ≈ one full stripe period along Y for the -45deg 48px gradient. */
-@keyframes pole-move {
-  from {
-    transform: translateY(-67.9px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.animate-pole {
-  animation: pole-move 1.8s linear infinite;
-}
-
 /* Marquee strip — two identical halves, translate by exactly one half. */
 @keyframes marquee {
   from {
@@ -87,7 +73,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-  .animate-pole,
   .animate-marquee {
     animation: none;
   }

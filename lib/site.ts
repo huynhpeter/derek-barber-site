@@ -60,7 +60,6 @@ export const portfolio: PortfolioTile[] = [
 export const nav = [
   { label: "Work", href: "#portfolio" },
   { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
   { label: "Shop", href: "#shop" },
   { label: "Find Me", href: "#contact" },
 ] as const;
