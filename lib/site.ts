@@ -1,7 +1,8 @@
 export const site = {
   name: "2Wheels1Beard",
   barber: "Derek Beatty",
-  bookingUrl: "https://cutcal.app/2wheels1beard",
+  // TODO: switch back to https://cutcal.app/2wheels1beard once the domain is live
+  bookingUrl: "https://cutcal.huynhxpeter-8ea.workers.dev/2wheels1beard",
   instagram: "https://www.instagram.com/2wheels1beard",
   youtube: "https://youtube.com/@2Wheels1Beard",
   location: {
