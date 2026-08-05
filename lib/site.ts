@@ -40,21 +40,50 @@ export const seo = {
 } as const;
 
 export type PortfolioTile = {
-  /** Doubles as the accessible name + lightbox caption */
+  /** Doubles as the lightbox caption */
   label: string;
-  /** Tailwind gradient classes for the placeholder art */
-  gradient: string;
+  /** Path under /public */
+  src: string;
+  /** Accessible description of the photo */
+  alt: string;
 };
 
-// PLACEHOLDER tiles — swap for real photos from Derek
+// STOCK stand-ins (Unsplash license, free for commercial use) — swap for
+// real photos from Derek. Source photo ids, in tile order:
+// 1622286342621, 1517832606299, 1599351431202, 1503951914875,
+// 1585747860715, 1558981403 (images.unsplash.com/photo-<id>).
 // (later: YouTube Data API feed, then Instagram — see BRIEF.md)
 export const portfolio: PortfolioTile[] = [
-  { label: "Skin fade", gradient: "from-violet/40 via-paper-soft to-paper" },
-  { label: "Beard sculpt", gradient: "from-sunset/35 via-paper-soft to-paper" },
-  { label: "Taper + line-up", gradient: "from-pole-blue/30 via-paper-soft to-paper" },
-  { label: "Cut and beard", gradient: "from-violet/30 via-sunset/15 to-paper" },
-  { label: "Kids cut", gradient: "from-pole-red/25 via-paper-soft to-paper" },
-  { label: "Fresh off the bike", gradient: "from-sunset/25 via-violet/20 to-paper" },
+  {
+    label: "Skin fade",
+    src: "/images/portfolio/skin-fade.jpg",
+    alt: "Barber working a fade with a straight razor",
+  },
+  {
+    label: "Beard sculpt",
+    src: "/images/portfolio/beard-sculpt.jpg",
+    alt: "Scissors shaping a full beard, black and white",
+  },
+  {
+    label: "Taper + line-up",
+    src: "/images/portfolio/taper-line-up.jpg",
+    alt: "Straight razor cleaning up a taper behind the ear",
+  },
+  {
+    label: "Cut and beard",
+    src: "/images/portfolio/cut-and-beard.jpg",
+    alt: "Client leaned back for a scissor beard trim",
+  },
+  {
+    label: "The chair",
+    src: "/images/portfolio/the-chair.jpg",
+    alt: "Barbershop interior with a leather chair under warm lights",
+  },
+  {
+    label: "Fresh off the bike",
+    src: "/images/portfolio/fresh-off-the-bike.jpg",
+    alt: "Orange motorcycle parked against a dark brick wall",
+  },
 ];
 
 export const nav = [

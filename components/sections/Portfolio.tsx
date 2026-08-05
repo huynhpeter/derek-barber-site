@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useLenis } from "lenis/react";
 import { Reveal } from "@/components/Reveal";
@@ -16,7 +17,7 @@ export function Portfolio() {
           The <span className="text-violet">Work</span>
         </h2>
         <p className="mt-3 max-w-lg text-stone">
-          Recent cuts and beard work. Real photos are coming soon.
+          Cuts and beard work from the chair.
           {/* TODO: replace placeholder tiles with real photos from Derek;
               later: YouTube Data API feed, then Instagram. */}
         </p>
@@ -31,11 +32,20 @@ export function Portfolio() {
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               aria-label={`View: ${tile.label}`}
-              className={`group flex aspect-square w-full items-end justify-start rounded-xl border border-charcoal/10 bg-gradient-to-br p-4 text-left transition-colors hover:border-violet/40 ${tile.gradient}`}
+              className="group relative flex aspect-square w-full items-end justify-start overflow-hidden rounded-xl border border-charcoal/10 p-4 text-left transition-colors hover:border-violet/40"
             >
-              <span className="text-sm text-stone transition-colors group-hover:text-charcoal">
-                {tile.label}
-              </span>
+              <Image
+                src={tile.src}
+                alt={tile.alt}
+                fill
+                sizes="(min-width: 640px) 33vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-charcoal/70 to-transparent"
+              />
+              <span className="relative text-sm text-paper">{tile.label}</span>
             </motion.button>
           </Reveal>
         ))}
@@ -137,12 +147,15 @@ function Lightbox({
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
-              className={`flex aspect-square w-full items-center justify-center rounded-2xl border border-charcoal/15 bg-gradient-to-br ${tile.gradient}`}
+              className="relative aspect-square w-full overflow-hidden rounded-2xl border border-charcoal/15"
             >
-              {/* PLACEHOLDER — real photo renders here */}
-              <span className="px-6 text-center text-lg text-charcoal">
-                {tile.label}
-              </span>
+              <Image
+                src={tile.src}
+                alt={tile.alt}
+                fill
+                sizes="(min-width: 672px) 672px, 100vw"
+                className="object-cover"
+              />
             </motion.div>
 
             <div className="mt-4 flex items-center justify-between">
