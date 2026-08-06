@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-// schema.org structured data — address/hours are PLACEHOLDERS from lib/site.ts
+// schema.org structured data — hours are still PLACEHOLDERS in lib/site.ts
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BarberShop",
@@ -52,11 +52,13 @@ const jsonLd = {
   founder: { "@type": "Person", name: site.barber },
   address: {
     "@type": "PostalAddress",
-    // PLACEHOLDER — fill from lib/site.ts once Derek provides the shop address
-    streetAddress: site.location.address,
-    addressRegion: "AZ",
+    streetAddress: site.location.street,
+    addressLocality: site.location.city,
+    addressRegion: site.location.state,
+    postalCode: site.location.zip,
     addressCountry: "US",
   },
+  containedInPlace: { "@type": "BarberShop", name: site.location.shop },
   openingHours: [...seo.openingHours],
   priceRange: seo.priceRange,
   sameAs: [site.instagram, site.youtube],

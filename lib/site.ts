@@ -6,10 +6,17 @@ export const site = {
   instagram: "https://www.instagram.com/2wheels1beard",
   youtube: "https://youtube.com/@2Wheels1Beard",
   location: {
-    // PLACEHOLDER — real shop name/address from Derek
-    shop: "[Shop Name]",
-    address: "[Street Address], Arizona",
-    mapsUrl: "https://maps.google.com",
+    shop: "Andy's Barbershop",
+    address: "650 N Estrella Pkwy, Goodyear, AZ 85338",
+    street: "650 N Estrella Pkwy",
+    city: "Goodyear",
+    state: "AZ",
+    zip: "85338",
+    // Shop landline (Andy's), not Derek's personal number
+    phone: "(623) 932-3301",
+    phoneHref: "tel:+16239323301",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Andy%27s+Barbershop%2C+650+N+Estrella+Pkwy%2C+Goodyear%2C+AZ+85338",
   },
   hours: [
     // PLACEHOLDER — mirror Cutcal availability once live
@@ -22,12 +29,14 @@ export const site = {
 export const seo = {
   // PLACEHOLDER domain — user is registering 2wheels1beard.com
   siteUrl: "https://2wheels1beard.com",
-  title: "2Wheels1Beard | Derek Beatty, Barber in Arizona",
+  title: "2Wheels1Beard | Derek Beatty, Barber in Goodyear, AZ",
   description:
-    "Derek Beatty (2Wheels1Beard) is an independent barber in Arizona. Fades, tapers, and beard trims. Book online, or walk in when the chair is open.",
+    "Derek Beatty (2Wheels1Beard) is an independent barber at Andy's Barbershop in Goodyear, Arizona. Fades, tapers, and beard trims. Book online, or walk in when the chair is open.",
   keywords: [
     "barber",
+    "Goodyear barber",
     "Arizona barber",
+    "Andy's Barbershop",
     "fade",
     "beard trim",
     "haircut",

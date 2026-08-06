@@ -22,6 +22,15 @@ export function Contact() {
           >
             Open in Maps →
           </a>
+          <p className="mt-3 text-sm text-stone">
+            Shop phone:{" "}
+            <a
+              href={site.location.phoneHref}
+              className="font-semibold text-charcoal underline-offset-4 hover:underline"
+            >
+              {site.location.phone}
+            </a>
+          </p>
 
           <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-sunset/40 px-4 py-2 text-sm text-sunset">
             Walk-ins welcome when the chair is open

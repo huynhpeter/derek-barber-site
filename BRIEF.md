@@ -35,7 +35,7 @@ Celtics green / Husker scarlet stay inside the logo & photos only.
 3. **Services & pricing** — fixed-duration/fixed-price cards (source of truth is Cutcal; shown here as marketing).
 4. **About Derek** — real photo (`public/images/derek.jpg`), Nebraska roots, the bike, fandoms.
 5. **Shop teaser** — "coming soon" placeholder; future dropshipping + some pickup product. Nothing functional now, nav slot reserved.
-6. **Location / Contact** — shop placeholder, hours, map link, **walk-ins welcome** note.
+6. **Location / Contact** — Andy's Barbershop, 650 N Estrella Pkwy, Goodyear, AZ 85338 (shop phone 623-932-3301); hours still placeholder; map link; **walk-ins welcome** note.
 7. **Footer** — socials, booking link, fine print.
 
 ## Booking
