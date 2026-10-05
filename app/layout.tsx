@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-// schema.org structured data — hours are still PLACEHOLDERS in lib/site.ts
+// schema.org structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BarberShop",

@@ -27,7 +27,7 @@ Custom domain: once `2wheels1beard.com` is registered and on Cloudflare, uncomme
 
 ## Where things live
 
-- `lib/site.ts` — all copy-ish constants: booking URL, socials, hours, placeholder services, portfolio tiles, SEO (`seo.siteUrl`, structured-data hours).
+- `lib/site.ts` — all copy-ish constants: booking URL, socials, hours, services, portfolio tiles, SEO (`seo.siteUrl`, structured-data hours).
 - `components/sections/*` — one component per page section, in page order.
 - `components/Reveal.tsx` — the scroll-reveal pattern; wrap new section content in it.
 - `components/SmoothScroll.tsx` — Lenis provider + `MotionConfig reducedMotion="user"` (mounted in `app/layout.tsx`); Lenis is skipped entirely under prefers-reduced-motion.
@@ -38,4 +38,4 @@ Custom domain: once `2wheels1beard.com` is registered and on Cloudflare, uncomme
 
 ## Placeholders to replace
 
-Real photos (portfolio tiles + lightbox in `lib/site.ts`, About portrait) · real services/prices · shop name + address + Maps link in `lib/site.ts` · hours (display + `seo.openingHours` structured data) · About copy from Derek · confirm `seo.siteUrl` once `2wheels1beard.com` is registered.
+Real photos (portfolio tiles + lightbox in `lib/site.ts`, About portrait) · About copy from Derek · confirm `seo.siteUrl` once `2wheels1beard.com` is registered.

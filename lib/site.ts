@@ -19,10 +19,10 @@ export const site = {
       "https://www.google.com/maps/search/?api=1&query=Andy%27s+Barbershop%2C+650+N+Estrella+Pkwy%2C+Goodyear%2C+AZ+85338",
   },
   hours: [
-    // PLACEHOLDER — mirror Cutcal availability once live
-    { days: "Tue – Fri", time: "9:00 AM – 6:00 PM" },
-    { days: "Sat", time: "9:00 AM – 4:00 PM" },
-    { days: "Sun – Mon", time: "Closed" },
+    { days: "Mon – Tue", time: "9:00 AM – 6:00 PM" },
+    { days: "Wed – Fri", time: "9:00 AM – 6:30 PM" },
+    { days: "Sat", time: "9:00 AM – 6:00 PM" },
+    { days: "Sun", time: "9:00 AM – 4:00 PM" },
   ],
 } as const;
 
@@ -44,9 +44,14 @@ export const seo = {
     "Derek Beatty",
     "book a haircut",
   ],
-  // PLACEHOLDER — schema.org openingHours, mirror `site.hours` once real
-  openingHours: ["Tu-Fr 09:00-18:00", "Sa 09:00-16:00"],
-  priceRange: "$20 - $50",
+  // schema.org openingHours, mirrors `site.hours`
+  openingHours: [
+    "Mo-Tu 09:00-18:00",
+    "We-Fr 09:00-18:30",
+    "Sa 09:00-18:00",
+    "Su 09:00-16:00",
+  ],
+  priceRange: "$10 - $50",
 } as const;
 
 export type PortfolioTile = {
@@ -107,34 +112,28 @@ export const nav = [
 export type Service = {
   name: string;
   price: string;
-  duration: string;
   blurb: string;
 };
 
-// PLACEHOLDER pricing — source of truth will be Cutcal
 export const services: Service[] = [
   {
     name: "Haircut",
-    price: "$35",
-    duration: "30 min",
+    price: "$36",
     blurb: "Fade, taper, or scissor cut.",
   },
   {
     name: "Cut + Beard",
     price: "$50",
-    duration: "45 min",
     blurb: "Haircut plus a full beard trim and shape.",
   },
   {
-    name: "Beard Trim",
-    price: "$20",
-    duration: "20 min",
-    blurb: "Line-up, shape, and hot-towel finish.",
+    name: "Beard Trim / Shave",
+    price: "$28",
+    blurb: "Line-up and shape, or a straight-razor shave, with a hot-towel finish.",
   },
   {
-    name: "Kids Cut",
-    price: "$25",
-    duration: "30 min",
-    blurb: "Ages 12 and under.",
+    name: "Eyebrow Shaping",
+    price: "$10",
+    blurb: "Cleaned up and shaped with a straight razor.",
   },
 ];

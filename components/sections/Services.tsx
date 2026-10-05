@@ -25,9 +25,6 @@ export function Services() {
                   {s.name}
                 </h3>
                 <p className="mt-1 text-sm text-stone">{s.blurb}</p>
-                <p className="mt-3 text-xs uppercase tracking-widest text-stone">
-                  {s.duration}
-                </p>
               </div>
               <span className="font-display text-3xl text-violet">
                 {s.price}
