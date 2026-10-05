@@ -1,3 +1,7 @@
+// Off until Cutcal is ready: hides every "Book" button/link and the
+// "book online" copy. Flip to true to bring them all back.
+export const bookingEnabled = false;
+
 export const site = {
   name: "2Wheels1Beard",
   barber: "Derek Beatty",
@@ -31,7 +35,9 @@ export const seo = {
   siteUrl: "https://2wheels1beard.com",
   title: "2Wheels1Beard | Derek Beatty, Barber in Goodyear, AZ",
   description:
-    "Derek Beatty (2Wheels1Beard) is an independent barber at Andy's Barbershop in Goodyear, Arizona. Fades, tapers, and beard trims. Book online, or walk in when the chair is open.",
+    `Derek Beatty (2Wheels1Beard) is an independent barber at Andy's Barbershop in Goodyear, Arizona. Fades, tapers, and beard trims. ${
+    bookingEnabled ? "Book online, or walk in" : "Walk in"
+  } when the chair is open.`,
   keywords: [
     "barber",
     "Goodyear barber",

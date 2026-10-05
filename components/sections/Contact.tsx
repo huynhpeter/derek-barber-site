@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import { site } from "@/lib/site";
+import { bookingEnabled, site } from "@/lib/site";
 
 export function Contact() {
   return (
@@ -52,12 +52,14 @@ export function Contact() {
               </li>
             ))}
           </ul>
-          <a
-            href={site.bookingUrl}
-            className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-paper shadow-lg shadow-violet/25 transition-transform hover:scale-105"
-          >
-            Book a Time
-          </a>
+          {bookingEnabled && (
+            <a
+              href={site.bookingUrl}
+              className="mt-8 inline-block rounded-full bg-violet px-8 py-4 font-bold text-paper shadow-lg shadow-violet/25 transition-transform hover:scale-105"
+            >
+              Book a Time
+            </a>
+          )}
         </Reveal>
       </div>
     </section>

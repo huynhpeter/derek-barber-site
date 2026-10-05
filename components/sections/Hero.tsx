@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "motion/react";
-import { site } from "@/lib/site";
+import { bookingEnabled, site } from "@/lib/site";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -75,8 +75,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.35 }}
           className="mt-6 max-w-md text-base text-stone sm:text-lg"
         >
-          Fades, tapers, and beard work in Arizona. Book online, or walk in
-          when the chair is open.
+          Fades, tapers, and beard work in Arizona.{" "}
+          {bookingEnabled ? "Book online, or walk in" : "Walk in"} when the
+          chair is open.
         </motion.p>
 
         <motion.div
@@ -85,14 +86,16 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <motion.a
-            href={site.bookingUrl}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="rounded-full bg-sunset px-8 py-4 text-lg font-bold text-paper shadow-lg shadow-sunset/25"
-          >
-            Book Now
-          </motion.a>
+          {bookingEnabled && (
+            <motion.a
+              href={site.bookingUrl}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="rounded-full bg-sunset px-8 py-4 text-lg font-bold text-paper shadow-lg shadow-sunset/25"
+            >
+              Book Now
+            </motion.a>
+          )}
           <a
             href={site.instagram}
             target="_blank"

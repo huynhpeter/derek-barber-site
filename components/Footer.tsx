@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/lib/site";
+import { bookingEnabled, site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -35,9 +35,11 @@ export function Footer() {
           >
             YouTube
           </a>
-          <a href={site.bookingUrl} className="text-sunset hover:text-charcoal">
-            Book Now
-          </a>
+          {bookingEnabled && (
+            <a href={site.bookingUrl} className="text-sunset hover:text-charcoal">
+              Book Now
+            </a>
+          )}
         </div>
       </div>
     </footer>

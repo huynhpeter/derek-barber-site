@@ -1,4 +1,8 @@
-const PHRASE = "Two Wheels · One Beard · Walk-Ins Welcome · Book Online · ";
+import { bookingEnabled } from "@/lib/site";
+
+const PHRASE = `Two Wheels · One Beard · Walk-Ins Welcome · ${
+  bookingEnabled ? "Book Online" : "Goodyear, AZ"
+} · `;
 
 /**
  * Scrolling tagline strip — decorative (aria-hidden), CSS transform animation,

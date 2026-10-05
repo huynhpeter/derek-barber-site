@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { nav, site } from "@/lib/site";
+import { bookingEnabled, nav, site } from "@/lib/site";
 
 export function Nav() {
   return (
@@ -35,12 +35,14 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <a
-          href={site.bookingUrl}
-          className="rounded-full bg-sunset px-4 py-2 text-sm font-semibold text-paper transition-transform hover:scale-105 sm:px-5"
-        >
-          Book Now
-        </a>
+        {bookingEnabled && (
+          <a
+            href={site.bookingUrl}
+            className="rounded-full bg-sunset px-4 py-2 text-sm font-semibold text-paper transition-transform hover:scale-105 sm:px-5"
+          >
+            Book Now
+          </a>
+        )}
       </div>
     </header>
   );
